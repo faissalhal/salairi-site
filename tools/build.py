@@ -19,6 +19,7 @@ e = html.escape
 # ---------------------------------------------------------------- Textes
 T = {
 'fr': dict(
+  nav_sim='Simulateur en ligne', sim_cta='Simuler en ligne',
   nav_features='Fonctionnalités', nav_reform='Réforme IR 2027', nav_faq='Questions', nav_privacy='Confidentialité', nav_legal='Mentions légales',
   home_title='Salairi — Calcul du salaire net au Maroc 2026-2030 | Fonction publique et privé',
   home_desc='Calculez votre salaire net au Maroc et son évolution de 2026 à 2030 avec la réforme de l’IR : fonction publique (ministère, cadre, grade, échelon) et secteur privé. Application Android gratuite.',
@@ -66,6 +67,7 @@ T = {
   nf_title='Page introuvable | Salairi', nf_text='Cette page n’existe pas.', nf_back='Retour à l’accueil',
 ),
 'ar': dict(
+  nav_sim='المحاكي على الإنترنت', sim_cta='احسب على الإنترنت',
   nav_features='المميزات', nav_reform='إصلاح الضريبة 2027', nav_faq='الأسئلة', nav_privacy='الخصوصية', nav_legal='الإشعارات القانونية',
   home_title='Salairi — حساب الأجر الصافي بالمغرب 2026-2030 | الوظيفة العمومية والقطاع الخاص',
   home_desc='احسب أجرتك الصافية بالمغرب وتطورها من 2026 إلى 2030 مع إصلاح الضريبة على الدخل: الوظيفة العمومية (الوزارة، الإطار، الدرجة، الرتبة) والقطاع الخاص. تطبيق أندرويد مجاني.',
@@ -113,6 +115,7 @@ T = {
   nf_title='الصفحة غير موجودة | Salairi', nf_text='هذه الصفحة غير موجودة.', nf_back='العودة إلى الرئيسية',
 ),
 'en': dict(
+  nav_sim='Online calculator', sim_cta='Calculate online',
   nav_features='Features', nav_reform='2027 tax reform', nav_faq='FAQ', nav_privacy='Privacy', nav_legal='Legal notice',
   home_title='Salairi — Morocco net salary calculator 2026-2030 | Civil service & private sector',
   home_desc='Calculate your net salary in Morocco and how it changes from 2026 to 2030 under the income tax reform: civil service (ministry, position, grade, step) and private sector. Free Android app.',
@@ -245,19 +248,20 @@ def page(lang, path, title, desc, body, paths, jsonld=None, og_type='website'):
 <div class="bar"></div>
 <header class="top"><div class="wrap">
 <a href="{home}" aria-label="Salairi"><img src="/img/logo.svg" alt="Salairi" width="170" height="50"></a>
-<nav><a class="hide" href="{home}#fonctionnalites">{t['nav_features']}</a><a class="hide" href="{SLUG_ART[lang]}">{t['nav_reform']}</a><a class="hide" href="{home}#faq">{t['nav_faq']}</a><div class="langs">{langs}</div></nav>
+<nav><a href="/simulateur/?lang={lang}" style="font-weight:600;color:var(--g)">{t['nav_sim']}</a><a class="hide" href="{home}#fonctionnalites">{t['nav_features']}</a><a class="hide" href="{SLUG_ART[lang]}">{t['nav_reform']}</a><a class="hide" href="{home}#faq">{t['nav_faq']}</a><div class="langs">{langs}</div></nav>
 </div></header>
 <main>{body}</main>
 <footer><div class="wrap">
 <img src="/img/logo-white.svg" alt="Salairi" width="150" height="44" loading="lazy">
-<div class="row"><a href="{SLUG_ART[lang]}">{t['nav_reform']}</a><a href="/confidentialite/">{t['nav_privacy']}</a><a href="/mentions-legales/">{t['nav_legal']}</a><a href="mailto:{EMAIL}">{t['contact']}</a></div>
+<div class="row"><a href="/simulateur/?lang={lang}">{t['nav_sim']}</a><a href="{SLUG_ART[lang]}">{t['nav_reform']}</a><a href="/confidentialite/">{t['nav_privacy']}</a><a href="/mentions-legales/">{t['nav_legal']}</a><a href="mailto:{EMAIL}">{t['contact']}</a></div>
 <p>{t['disclaimer']}</p><p>{t['rights']}</p>
 </div></footer>
 </body></html>'''
 
 def play_button(lang):
     t = T[lang]
-    return f'<a class="btn" href="{PLAY}" rel="noopener">{PLAY_SVG}<span>{t["cta"]}</span></a><p class="small">{t["cta_small"]}</p>'
+    return (f'<div style="display:flex;flex-wrap:wrap;gap:10px"><a class="btn" href="{PLAY}" rel="noopener">{PLAY_SVG}<span>{t["cta"]}</span></a>'
+            f'<a class="btn" style="background:#fff;color:var(--g)" href="/simulateur/?lang={lang}">{t["sim_cta"]} →</a></div><p class="small">{t["cta_small"]}</p>')
 
 def home(lang):
     t = T[lang]
@@ -344,6 +348,7 @@ sitemap = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.
 groups = [{l: PREFIX[l] + '/' for l in LANGS}, SLUG_ART]
 for s_ in ('confidentialite', 'mentions-legales'):
     sitemap.append(f'<url><loc>{SITE}/{s_}/</loc><lastmod>{TODAY}</lastmod></url>')
+sitemap.append(f'<url><loc>{SITE}/simulateur/</loc><lastmod>{TODAY}</lastmod></url>')
 for g in groups:
     for l in LANGS:
         alts = ''.join(f'<xhtml:link rel="alternate" hreflang="{k}" href="{SITE}{g[k]}"/>' for k in LANGS)
