@@ -238,6 +238,8 @@ def page(lang, path, title, desc, body, paths, jsonld=None, og_type='website'):
 <meta property="og:url" content="{SITE}{path}"><meta property="og:image" content="{SITE}/img/og.jpg"><meta property="og:locale" content="{LOCALE[lang]}">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#006233">
+<meta name="google-adsense-account" content="ca-pub-9525234825796734">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9525234825796734" crossorigin="anonymous"></script>
 <link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Noto+Sans+Arabic:wght@400;600;700&display=swap" rel="stylesheet">
