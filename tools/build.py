@@ -19,7 +19,7 @@ e = html.escape
 # ---------------------------------------------------------------- Textes
 T = {
 'fr': dict(
-  nav_sim='Simulateur en ligne', sim_cta='Simuler en ligne',
+  nav_sim='Simulateur en ligne', nav_guides='Guides', guides_title='Guides salaire et impôt au Maroc | Salairi', guides_desc='Guides pratiques sur le salaire au Maroc : bulletin de paie du fonctionnaire, salaire net dans le privé, mutuelles et fondations, barème de l’IR 2026-2030.', guides_h1='Guides : salaire, bulletin de paie et impôt au Maroc', guides_intro='Des explications simples, à jour des règles 2026 et de la réforme de l’IR, pour comprendre votre salaire.', read_also='À lire aussi', sim_cta='Simuler en ligne',
   nav_features='Fonctionnalités', nav_reform='Réforme IR 2027', nav_faq='Questions', nav_privacy='Confidentialité', nav_legal='Mentions légales',
   home_title='Salairi — Calcul du salaire net au Maroc 2026-2030 | Fonction publique et privé',
   home_desc='Calculez votre salaire net au Maroc et son évolution de 2026 à 2030 avec la réforme de l’IR : fonction publique (ministère, cadre, grade, échelon) et secteur privé. Application Android gratuite.',
@@ -67,7 +67,7 @@ T = {
   nf_title='Page introuvable | Salairi', nf_text='Cette page n’existe pas.', nf_back='Retour à l’accueil',
 ),
 'ar': dict(
-  nav_sim='المحاكي على الإنترنت', sim_cta='احسب على الإنترنت',
+  nav_sim='المحاكي على الإنترنت', nav_guides='الدلائل', guides_title='دلائل الأجر والضريبة بالمغرب | Salairi', guides_desc='دلائل عملية حول الأجر بالمغرب: ورقة أداء الموظف، الأجر الصافي في القطاع الخاص، التعاضديات والمؤسسات، جدول الضريبة على الدخل 2026-2030.', guides_h1='دلائل: الأجر وورقة الأداء والضريبة بالمغرب', guides_intro='شروحات مبسطة ومحيّنة وفق قواعد 2026 وإصلاح الضريبة على الدخل، لفهم أجرتك.', read_also='اقرأ أيضاً', sim_cta='احسب على الإنترنت',
   nav_features='المميزات', nav_reform='إصلاح الضريبة 2027', nav_faq='الأسئلة', nav_privacy='الخصوصية', nav_legal='الإشعارات القانونية',
   home_title='Salairi — حساب الأجر الصافي بالمغرب 2026-2030 | الوظيفة العمومية والقطاع الخاص',
   home_desc='احسب أجرتك الصافية بالمغرب وتطورها من 2026 إلى 2030 مع إصلاح الضريبة على الدخل: الوظيفة العمومية (الوزارة، الإطار، الدرجة، الرتبة) والقطاع الخاص. تطبيق أندرويد مجاني.',
@@ -115,7 +115,7 @@ T = {
   nf_title='الصفحة غير موجودة | Salairi', nf_text='هذه الصفحة غير موجودة.', nf_back='العودة إلى الرئيسية',
 ),
 'en': dict(
-  nav_sim='Online calculator', sim_cta='Calculate online',
+  nav_sim='Online calculator', nav_guides='Guides', guides_title='Salary and tax guides for Morocco | Salairi', guides_desc='Practical guides on salaries in Morocco: the 2026-2030 income tax scale and the 2027 reform. More guides are available in French and Arabic.', guides_h1='Guides: salary and income tax in Morocco', guides_intro='Plain explanations of Moroccan salary rules, up to date with 2026 and the income tax reform. More guides are available in French and Arabic.', read_also='Read also', sim_cta='Calculate online',
   nav_features='Features', nav_reform='2027 tax reform', nav_faq='FAQ', nav_privacy='Privacy', nav_legal='Legal notice',
   home_title='Salairi — Morocco net salary calculator 2026-2030 | Civil service & private sector',
   home_desc='Calculate your net salary in Morocco and how it changes from 2026 to 2030 under the income tax reform: civil service (ministry, position, grade, step) and private sector. Free Android app.',
@@ -209,20 +209,20 @@ footer{background:var(--g);color:rgba(255,255,255,.82);font-size:14px;padding:36
 article{background:#fff;border-radius:22px;padding:36px;margin:36px auto;max-width:860px}article h1{font-size:clamp(26px,3.6vw,38px);line-height:1.2;margin-top:0}article h2{font-size:22px;margin:30px 0 12px}
 table{width:100%;border-collapse:collapse;font-size:15px}th,td{border-bottom:1px solid var(--sand);padding:10px 8px;text-align:start;vertical-align:top}th{background:var(--g5)}
 .tag{display:inline-block;font-size:12px;border-radius:99px;padding:2px 10px;background:#FFF4D6;color:#7a5a00}.tag.in{background:var(--g5);color:var(--g7)}
-.muted{color:var(--mut);font-size:14px}.note{background:var(--bg);border-radius:12px;padding:12px 16px;color:var(--mut);font-size:14px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px}.grid2 .card{box-shadow:none;border:1px solid var(--sand)}.grid2 h3{margin-top:0}.muted{color:var(--mut);font-size:14px}.note{background:var(--bg);border-radius:12px;padding:12px 16px;color:var(--mut);font-size:14px}
 @media (max-width:900px){.hero .wrap{grid-template-columns:1fr}.grid4{grid-template-columns:1fr 1fr}.shots{grid-template-columns:1fr 1fr}.steps{grid-template-columns:1fr}.top nav .hide{display:none}}
-@media (max-width:560px){.grid4{grid-template-columns:1fr}article{padding:22px}}
+@media (max-width:560px){.grid4,.grid2{grid-template-columns:1fr}article{padding:22px}}
 """
 
 PLAY_SVG = '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#34A853" d="M3.6 1.8 13.4 12l-9.8 10.2c-.4-.2-.6-.6-.6-1.1V2.9c0-.5.2-.9.6-1.1z"/><path fill="#FBBC04" d="m16.8 8.6-3.4 3.4 3.4 3.4 3.9-2.2c.8-.5.8-1.7 0-2.2z"/><path fill="#4285F4" d="M3.6 22.2 13.4 12l3.4 3.4-11.5 6.6c-.6.3-1.2.4-1.7.2z"/><path fill="#EA4335" d="M3.6 1.8c.5-.2 1.1-.1 1.7.2l11.5 6.6-3.4 3.4z"/></svg>'
 
 def alternates(paths):
-    out = ''.join(f'<link rel="alternate" hreflang="{l}" href="{SITE}{paths[l]}">' for l in LANGS)
+    out = ''.join(f'<link rel="alternate" hreflang="{l}" href="{SITE}{paths[l]}">' for l in LANGS if l in paths)
     return out + f'<link rel="alternate" hreflang="x-default" href="{SITE}{paths["fr"]}">'
 
 def page(lang, path, title, desc, body, paths, jsonld=None, og_type='website'):
     t = T[lang]
-    langs = ''.join(f'<a href="{paths[l]}" hreflang="{l}" class="{"on" if l == lang else ""}" lang="{l}">{ {"fr": "FR", "ar": "ع", "en": "EN"}[l] }</a>' for l in LANGS)
+    langs = ''.join(f'<a href="{paths.get(l, PREFIX[l] + '/')}" hreflang="{l}" class="{"on" if l == lang else ""}" lang="{l}">{ {"fr": "FR", "ar": "ع", "en": "EN"}[l] }</a>' for l in LANGS)
     home = PREFIX[lang] + '/'
     ld = ''.join(f'<script type="application/ld+json">{json.dumps(j, ensure_ascii=False)}</script>' for j in (jsonld or []))
     return f'''<!DOCTYPE html>
@@ -250,12 +250,12 @@ def page(lang, path, title, desc, body, paths, jsonld=None, og_type='website'):
 <div class="bar"></div>
 <header class="top"><div class="wrap">
 <a href="{home}" aria-label="Salairi"><img src="/img/logo.svg" alt="Salairi" width="170" height="50"></a>
-<nav><a href="/simulateur/?lang={lang}" style="font-weight:600;color:var(--g)">{t['nav_sim']}</a><a class="hide" href="{home}#fonctionnalites">{t['nav_features']}</a><a class="hide" href="{SLUG_ART[lang]}">{t['nav_reform']}</a><a class="hide" href="{home}#faq">{t['nav_faq']}</a><div class="langs">{langs}</div></nav>
+<nav><a href="/simulateur/?lang={lang}" style="font-weight:600;color:var(--g)">{t['nav_sim']}</a><a class="hide" href="{home}#fonctionnalites">{t['nav_features']}</a><a class="hide" href="{SLUG_GUIDES[lang]}">{t['nav_guides']}</a><a class="hide" href="{SLUG_ART[lang]}">{t['nav_reform']}</a><a class="hide" href="{home}#faq">{t['nav_faq']}</a><div class="langs">{langs}</div></nav>
 </div></header>
 <main>{body}</main>
 <footer><div class="wrap">
 <img src="/img/logo-white.svg" alt="Salairi" width="150" height="44" loading="lazy">
-<div class="row"><a href="/simulateur/?lang={lang}">{t['nav_sim']}</a><a href="{SLUG_ART[lang]}">{t['nav_reform']}</a><a href="/confidentialite/">{t['nav_privacy']}</a><a href="/mentions-legales/">{t['nav_legal']}</a><a href="mailto:{EMAIL}">{t['contact']}</a></div>
+<div class="row"><a href="/simulateur/?lang={lang}">{t['nav_sim']}</a><a href="{SLUG_GUIDES[lang]}">{t['nav_guides']}</a><a href="{SLUG_ART[lang]}">{t['nav_reform']}</a><a href="/confidentialite/">{t['nav_privacy']}</a><a href="/mentions-legales/">{t['nav_legal']}</a><a href="mailto:{EMAIL}">{t['contact']}</a></div>
 <p>{t['disclaimer']}</p><p>{t['rights']}</p>
 </div></footer>
 </body></html>'''
@@ -323,6 +323,35 @@ def article(lang):
            'image': SITE + '/img/og.jpg', 'mainEntityOfPage': SITE + SLUG_ART[lang]}]
     return SLUG_ART[lang], page(lang, SLUG_ART[lang], t['art_title'], t['art_desc'], body, SLUG_ART, ld, 'article')
 
+from articles import ARTICLES
+SLUG_GUIDES = {'fr': '/guides/', 'ar': '/ar/guides/', 'en': '/en/guides/'}
+
+def guide_list(lang, exclude=None):
+    items = [(a['slug'][lang], a['h1'][lang], a['desc'][lang]) for a in ARTICLES if lang in a['slug'] and a['id'] != exclude]
+    if exclude != 'ir': items.append((SLUG_ART[lang], T[lang]['art_h1'], T[lang]['art_desc']))
+    return ''.join(f'<div class="card"><h3><a href="{u}">{e(h)}</a></h3><p>{e(d)}</p></div>' for u, h, d in items)
+
+def article_ld(lang, h1, desc, url, date):
+    return [{'@context': 'https://schema.org', '@type': 'Article', 'headline': h1, 'description': desc, 'inLanguage': lang,
+             'datePublished': date, 'dateModified': TODAY, 'author': {'@type': 'Organization', 'name': 'Salairi'},
+             'publisher': {'@type': 'Organization', 'name': 'Salairi', 'logo': {'@type': 'ImageObject', 'url': SITE + '/img/icon-192.png'}},
+             'image': SITE + '/img/og.jpg', 'mainEntityOfPage': SITE + url}]
+
+def guide_article(a, lang):
+    t = T[lang]; url = a['slug'][lang]
+    body = f'''<article>
+<h1>{e(a['h1'][lang])}</h1>
+{a['body'][lang]}
+<div class="cta" style="margin-top:28px"><h2>{e(t['art_cta'])}</h2>{play_button(lang)}</div>
+<h2>{t['read_also']}</h2><div class="grid2">{guide_list(lang, a['id'])}</div>
+</article>'''
+    return url, page(lang, url, a['title'][lang], a['desc'][lang], body, a['slug'], article_ld(lang, a['h1'][lang], a['desc'][lang], url, a['date']), 'article')
+
+def guides_index(lang):
+    t = T[lang]; url = SLUG_GUIDES[lang]
+    body = f'<article><h1>{e(t["guides_h1"])}</h1><p>{e(t["guides_intro"])}</p><div class="grid2">{guide_list(lang)}</div><div class="cta" style="margin-top:28px"><h2>{e(t["art_cta"])}</h2>{play_button(lang)}</div></article>'
+    return url, page(lang, url, t['guides_title'], t['guides_desc'], body, SLUG_GUIDES)
+
 def static_page(lang, slug, title, inner_file):
     paths = {l: f'/{slug}/' for l in LANGS}
     inner = open(os.path.join(ROOT, 'tools', inner_file), encoding='utf-8').read()
@@ -336,8 +365,11 @@ def write(path, content):
 
 urls = []
 for lang in LANGS:
-    for fn in (home, article):
+    for fn in (home, article, guides_index):
         path, content = fn(lang); write(path, content); urls.append(path)
+    for a in ARTICLES:
+        if lang in a['slug']:
+            path, content = guide_article(a, lang); write(path, content); urls.append(path)
 for slug, title, f in [('confidentialite', 'priv_title', 'privacy.html'), ('mentions-legales', 'legal_title', 'legal.html')]:
     path, content = static_page('fr', slug, title, f); write(path, content); urls.append(path)  # pages trilingues : une seule adresse
 
@@ -347,13 +379,13 @@ open(os.path.join(ROOT, '404.html'), 'w', encoding='utf-8').write(page('fr', '/4
 open(os.path.join(ROOT, 'privacy.html'), 'w', encoding='utf-8').write('<!DOCTYPE html><meta charset="utf-8"><meta http-equiv="refresh" content="0; url=/confidentialite/"><link rel="canonical" href="https://salairi.ma/confidentialite/"><a href="/confidentialite/">Politique de confidentialité</a>')
 
 sitemap = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">']
-groups = [{l: PREFIX[l] + '/' for l in LANGS}, SLUG_ART]
+groups = [{l: PREFIX[l] + '/' for l in LANGS}, SLUG_ART, SLUG_GUIDES] + [a['slug'] for a in ARTICLES]
 for s_ in ('confidentialite', 'mentions-legales'):
     sitemap.append(f'<url><loc>{SITE}/{s_}/</loc><lastmod>{TODAY}</lastmod></url>')
 sitemap.append(f'<url><loc>{SITE}/simulateur/</loc><lastmod>{TODAY}</lastmod></url>')
 for g in groups:
-    for l in LANGS:
-        alts = ''.join(f'<xhtml:link rel="alternate" hreflang="{k}" href="{SITE}{g[k]}"/>' for k in LANGS)
+    for l in [x for x in LANGS if x in g]:
+        alts = ''.join(f'<xhtml:link rel="alternate" hreflang="{k}" href="{SITE}{g[k]}"/>' for k in LANGS if k in g)
         sitemap.append(f'<url><loc>{SITE}{g[l]}</loc><lastmod>{TODAY}</lastmod>{alts}</url>')
 sitemap.append('</urlset>')
 open(os.path.join(ROOT, 'sitemap.xml'), 'w').write('\n'.join(sitemap))
