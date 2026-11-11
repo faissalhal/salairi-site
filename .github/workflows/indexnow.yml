@@ -1,0 +1,24 @@
+name: IndexNow (Bing, Yandex, Seznam…)
+on:
+  push:
+    branches: [main]
+    paths-ignore: ['tools/**', 'README.md']
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Attendre la publication GitHub Pages
+        run: sleep 120
+      - name: Envoyer toutes les URL du sitemap
+        run: |
+          python3 - <<'PY'
+          import json, re, urllib.request
+          urls = re.findall(r'<loc>(.*?)</loc>', open('sitemap.xml').read())
+          body = json.dumps({'host': 'salairi.ma', 'key': '8f00e4f4c97efd209a6f865a5e37f8fd', 'keyLocation': 'https://salairi.ma/8f00e4f4c97efd209a6f865a5e37f8fd.txt', 'urlList': urls}).encode()
+          req = urllib.request.Request('https://api.indexnow.org/indexnow', data=body, headers={'Content-Type': 'application/json; charset=utf-8'})
+          try:
+              r = urllib.request.urlopen(req, timeout=30); print('IndexNow', r.status, len(urls), 'URL')
+          except Exception as ex:
+              print('::warning::IndexNow', ex)
+          PY

@@ -19,7 +19,7 @@ e = html.escape
 # ---------------------------------------------------------------- Textes
 T = {
 'fr': dict(
-  nav_sim='Simulateur en ligne', nav_guides='Guides', guides_title='Guides salaire et impôt au Maroc | Salairi', guides_desc='Guides pratiques sur le salaire au Maroc : bulletin de paie du fonctionnaire, salaire net dans le privé, mutuelles et fondations, barème de l’IR 2026-2030.', guides_h1='Guides : salaire, bulletin de paie et impôt au Maroc', guides_intro='Des explications simples, à jour des règles 2026 et de la réforme de l’IR, pour comprendre votre salaire.', read_also='À lire aussi', sim_cta='Simuler en ligne',
+  nav_sim='Simulateur en ligne', nav_about='À propos', nav_contact='Contact', latest_guides='Derniers guides', updated='Mis à jour le', by_team='Par l’équipe Salairi', about_title='À propos | Salairi', contact_title='Contact | Salairi', nav_guides='Guides', guides_title='Guides salaire et impôt au Maroc | Salairi', guides_desc='Guides pratiques sur le salaire au Maroc : bulletin de paie du fonctionnaire, salaire net dans le privé, mutuelles et fondations, barème de l’IR 2026-2030.', guides_h1='Guides : salaire, bulletin de paie et impôt au Maroc', guides_intro='Des explications simples, à jour des règles 2026 et de la réforme de l’IR, pour comprendre votre salaire.', read_also='À lire aussi', sim_cta='Simuler en ligne',
   nav_features='Fonctionnalités', nav_reform='Réforme IR 2027', nav_faq='Questions', nav_privacy='Confidentialité', nav_legal='Mentions légales',
   home_title='Salairi — Calcul du salaire net au Maroc 2026-2030 | Fonction publique et privé',
   home_desc='Calculez votre salaire net au Maroc et son évolution de 2026 à 2030 avec la réforme de l’IR : fonction publique (ministère, cadre, grade, échelon) et secteur privé. Application Android gratuite.',
@@ -67,7 +67,7 @@ T = {
   nf_title='Page introuvable | Salairi', nf_text='Cette page n’existe pas.', nf_back='Retour à l’accueil',
 ),
 'ar': dict(
-  nav_sim='المحاكي على الإنترنت', nav_guides='الدلائل', guides_title='دلائل الأجر والضريبة بالمغرب | Salairi', guides_desc='دلائل عملية حول الأجر بالمغرب: ورقة أداء الموظف، الأجر الصافي في القطاع الخاص، التعاضديات والمؤسسات، جدول الضريبة على الدخل 2026-2030.', guides_h1='دلائل: الأجر وورقة الأداء والضريبة بالمغرب', guides_intro='شروحات مبسطة ومحيّنة وفق قواعد 2026 وإصلاح الضريبة على الدخل، لفهم أجرتك.', read_also='اقرأ أيضاً', sim_cta='احسب على الإنترنت',
+  nav_sim='المحاكي على الإنترنت', nav_about='من نحن', nav_contact='اتصل بنا', latest_guides='أحدث الدلائل', updated='آخر تحديث:', by_team='فريق Salairi', about_title='من نحن | Salairi', contact_title='اتصل بنا | Salairi', nav_guides='الدلائل', guides_title='دلائل الأجر والضريبة بالمغرب | Salairi', guides_desc='دلائل عملية حول الأجر بالمغرب: ورقة أداء الموظف، الأجر الصافي في القطاع الخاص، التعاضديات والمؤسسات، جدول الضريبة على الدخل 2026-2030.', guides_h1='دلائل: الأجر وورقة الأداء والضريبة بالمغرب', guides_intro='شروحات مبسطة ومحيّنة وفق قواعد 2026 وإصلاح الضريبة على الدخل، لفهم أجرتك.', read_also='اقرأ أيضاً', sim_cta='احسب على الإنترنت',
   nav_features='المميزات', nav_reform='إصلاح الضريبة 2027', nav_faq='الأسئلة', nav_privacy='الخصوصية', nav_legal='الإشعارات القانونية',
   home_title='Salairi — حساب الأجر الصافي بالمغرب 2026-2030 | الوظيفة العمومية والقطاع الخاص',
   home_desc='احسب أجرتك الصافية بالمغرب وتطورها من 2026 إلى 2030 مع إصلاح الضريبة على الدخل: الوظيفة العمومية (الوزارة، الإطار، الدرجة، الرتبة) والقطاع الخاص. تطبيق أندرويد مجاني.',
@@ -115,7 +115,7 @@ T = {
   nf_title='الصفحة غير موجودة | Salairi', nf_text='هذه الصفحة غير موجودة.', nf_back='العودة إلى الرئيسية',
 ),
 'en': dict(
-  nav_sim='Online calculator', nav_guides='Guides', guides_title='Salary and tax guides for Morocco | Salairi', guides_desc='Practical guides on salaries in Morocco: the 2026-2030 income tax scale and the 2027 reform. More guides are available in French and Arabic.', guides_h1='Guides: salary and income tax in Morocco', guides_intro='Plain explanations of Moroccan salary rules, up to date with 2026 and the income tax reform. More guides are available in French and Arabic.', read_also='Read also', sim_cta='Calculate online',
+  nav_sim='Online calculator', nav_about='About', nav_contact='Contact', latest_guides='Latest guides', updated='Updated on', by_team='By the Salairi team', about_title='About | Salairi', contact_title='Contact | Salairi', nav_guides='Guides', guides_title='Salary and tax guides for Morocco | Salairi', guides_desc='Practical guides on salaries in Morocco: the 2026-2030 income tax scale and the 2027 reform. More guides are available in French and Arabic.', guides_h1='Guides: salary and income tax in Morocco', guides_intro='Plain explanations of Moroccan salary rules, up to date with 2026 and the income tax reform. More guides are available in French and Arabic.', read_also='Read also', sim_cta='Calculate online',
   nav_features='Features', nav_reform='2027 tax reform', nav_faq='FAQ', nav_privacy='Privacy', nav_legal='Legal notice',
   home_title='Salairi — Morocco net salary calculator 2026-2030 | Civil service & private sector',
   home_desc='Calculate your net salary in Morocco and how it changes from 2026 to 2030 under the income tax reform: civil service (ministry, position, grade, step) and private sector. Free Android app.',
@@ -255,7 +255,7 @@ def page(lang, path, title, desc, body, paths, jsonld=None, og_type='website'):
 <main>{body}</main>
 <footer><div class="wrap">
 <img src="/img/logo-white.svg" alt="Salairi" width="150" height="44" loading="lazy">
-<div class="row"><a href="/simulateur/?lang={lang}">{t['nav_sim']}</a><a href="{SLUG_GUIDES[lang]}">{t['nav_guides']}</a><a href="{SLUG_ART[lang]}">{t['nav_reform']}</a><a href="/confidentialite/">{t['nav_privacy']}</a><a href="/mentions-legales/">{t['nav_legal']}</a><a href="mailto:{EMAIL}">{t['contact']}</a></div>
+<div class="row"><a href="/simulateur/?lang={lang}">{t['nav_sim']}</a><a href="{SLUG_GUIDES[lang]}">{t['nav_guides']}</a><a href="{SLUG_ART[lang]}">{t['nav_reform']}</a><a href="/confidentialite/">{t['nav_privacy']}</a><a href="/mentions-legales/">{t['nav_legal']}</a><a href="/a-propos/">{t['nav_about']}</a><a href="/contact/">{t['nav_contact']}</a></div>
 <p>{t['disclaimer']}</p><p>{t['rights']}</p>
 </div></footer>
 </body></html>'''
@@ -283,6 +283,7 @@ def home(lang):
 <section style="padding-top:0"><div class="wrap"><h2>{t['how_title']}</h2><div class="steps">{steps}</div></div></section>
 <section class="reform" id="reforme"><div class="wrap"><h2>{t['reform_title']}</h2><ul>{reform}</ul><a class="more" href="{SLUG_ART[lang]}">{t['reform_more']} →</a></div></section>
 <section><div class="wrap"><h2>{t['shots_title']}</h2><div class="shots">{shots}</div></div></section>
+<section style="padding-top:0"><div class="wrap"><h2>{t['latest_guides']}</h2><div class="grid2">{guide_list(lang)}</div><a class="more" href="{SLUG_GUIDES[lang]}">{t['nav_guides']} →</a></div></section>
 <section id="faq" style="padding-top:0"><div class="wrap"><h2>{t['faq_title']}</h2>{faq}</div></section>
 <section style="padding-top:0"><div class="wrap"><div class="cta"><h2>{e(t['h1'])}</h2>{play_button(lang)}</div></div></section>'''
     ld = [
@@ -340,10 +341,17 @@ def article_ld(lang, h1, desc, url, date):
              'publisher': {'@type': 'Organization', 'name': 'Salairi', 'logo': {'@type': 'ImageObject', 'url': SITE + '/img/icon-192.png'}},
              'image': SITE + '/img/og.jpg', 'mainEntityOfPage': SITE + url}]
 
+MONTHS = {'fr': ['janvier','février','mars','avril','mai','juin','juillet','août','septembre','octobre','novembre','décembre'],
+          'ar': ['يناير','فبراير','مارس','أبريل','ماي','يونيو','يوليوز','غشت','شتنبر','أكتوبر','نونبر','دجنبر'],
+          'en': ['January','February','March','April','May','June','July','August','September','October','November','December']}
+def fmt_date(d, lang):
+    y, m, dd = d.split('-'); return f"{int(dd)} {MONTHS[lang][int(m)-1]} {y}"
+
 def guide_article(a, lang):
     t = T[lang]; url = a['slug'][lang]
     body = f'''<article>
 <h1>{e(a['h1'][lang])}</h1>
+<p class="note">{t['by_team']} · {t['updated']} <time datetime="{a['date']}">{fmt_date(a['date'], lang)}</time></p>
 {a['body'][lang]}
 <div class="cta" style="margin-top:28px"><h2>{e(t['art_cta'])}</h2>{play_button(lang)}</div>
 <h2>{t['read_also']}</h2><div class="grid2">{guide_list(lang, a['id'])}</div>
@@ -373,7 +381,7 @@ for lang in LANGS:
     for a in ARTICLES:
         if lang in a['slug']:
             path, content = guide_article(a, lang); write(path, content); urls.append(path)
-for slug, title, f in [('confidentialite', 'priv_title', 'privacy.html'), ('mentions-legales', 'legal_title', 'legal.html')]:
+for slug, title, f in [('confidentialite', 'priv_title', 'privacy.html'), ('mentions-legales', 'legal_title', 'legal.html'), ('a-propos', 'about_title', 'about.html'), ('contact', 'contact_title', 'contact.html')]:
     path, content = static_page('fr', slug, title, f); write(path, content); urls.append(path)  # pages trilingues : une seule adresse
 
 # 404, redirection de l'ancienne adresse de confidentialité
@@ -383,7 +391,7 @@ open(os.path.join(ROOT, 'privacy.html'), 'w', encoding='utf-8').write('<!DOCTYPE
 
 sitemap = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">']
 groups = [{l: PREFIX[l] + '/' for l in LANGS}, SLUG_ART, SLUG_GUIDES] + [a['slug'] for a in ARTICLES]
-for s_ in ('confidentialite', 'mentions-legales'):
+for s_ in ('confidentialite', 'mentions-legales', 'a-propos', 'contact'):
     sitemap.append(f'<url><loc>{SITE}/{s_}/</loc><lastmod>{TODAY}</lastmod></url>')
 sitemap.append(f'<url><loc>{SITE}/simulateur/</loc><lastmod>{TODAY}</lastmod></url>')
 for g in groups:
