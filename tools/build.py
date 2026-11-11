@@ -324,6 +324,8 @@ def article(lang):
     return SLUG_ART[lang], page(lang, SLUG_ART[lang], t['art_title'], t['art_desc'], body, SLUG_ART, ld, 'article')
 
 from articles import ARTICLES
+from articles2 import ARTICLES2
+ARTICLES = ARTICLES2 + ARTICLES
 SLUG_GUIDES = {'fr': '/guides/', 'ar': '/ar/guides/', 'en': '/en/guides/'}
 
 def guide_list(lang, exclude=None):
