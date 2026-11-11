@@ -325,7 +325,8 @@ def article(lang):
 
 from articles import ARTICLES
 from articles2 import ARTICLES2
-ARTICLES = ARTICLES2 + ARTICLES
+from articles3 import ARTICLES3
+ARTICLES = ARTICLES3 + ARTICLES2 + ARTICLES
 SLUG_GUIDES = {'fr': '/guides/', 'ar': '/ar/guides/', 'en': '/en/guides/'}
 
 def guide_list(lang, exclude=None):
