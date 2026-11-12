@@ -1,7 +1,7 @@
 """Guides supplémentaires (novembre 2026) — FR / AR. Règles publiques uniquement."""
 
-SRC_FR = '<p class="note">Sources officielles : <a href="https://www.tax.gov.ma" rel="noopener" target="_blank">Direction générale des impôts</a> · <a href="https://www.sgg.gov.ma" rel="noopener" target="_blank">Bulletin officiel (SGG)</a> · <a href="https://www.cnss.ma" rel="noopener" target="_blank">CNSS</a>. Salairi est un site indépendant, non affilié au gouvernement.</p>'
-SRC_AR = '<p class="note">المصادر الرسمية: <a href="https://www.tax.gov.ma" rel="noopener" target="_blank">المديرية العامة للضرائب</a> · <a href="https://www.sgg.gov.ma" rel="noopener" target="_blank">الجريدة الرسمية (الأمانة العامة للحكومة)</a> · <a href="https://www.cnss.ma" rel="noopener" target="_blank">الصندوق الوطني للضمان الاجتماعي</a>. Salairi موقع مستقل غير تابع للحكومة.</p>'
+SRC_FR = '<p class="note">Sources officielles : <a href="https://www.finances.gov.ma/fr/Pages/index.aspx" rel="noopener" target="_blank">Ministère de l’Économie et des Finances</a> · <a href="https://www.mmsp.gov.ma/fr" rel="noopener" target="_blank">Ministère de la Réforme de l’Administration</a> · <a href="https://www.idarati.ma" rel="noopener" target="_blank">Idarati</a> · <a href="https://maroc.ma/fr" rel="noopener" target="_blank">maroc.ma</a>. Salairi est un site indépendant, non affilié au gouvernement.</p>'
+SRC_AR = '<p class="note">المصادر الرسمية: <a href="https://www.finances.gov.ma/ar/Pages/index.aspx" rel="noopener" target="_blank">وزارة الاقتصاد والمالية</a> · <a href="https://www.mmsp.gov.ma/ar" rel="noopener" target="_blank">وزارة إصلاح الإدارة</a> · <a href="https://www.idarati.ma" rel="noopener" target="_blank">إدارتي</a> · <a href="https://maroc.ma/ar" rel="noopener" target="_blank">maroc.ma</a>. Salairi موقع مستقل غير تابع للحكومة.</p>'
 
 ARTICLES2 = [
 {

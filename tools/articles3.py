@@ -149,7 +149,7 @@ ARTICLES3 = [
 <tr><td>4e, 5e et 6e enfant</td><td>montant réduit (36 DH, relevé à 100 DH par le décret n° 2.23.715)</td></tr>
 <tr><td>au-delà du 6e</td><td>rien</td></tr>
 </tbody></table>
-<p>Une famille de trois enfants reçoit donc <b>900 DH par mois</b>. Pour les 4e à 6e enfants, vérifiez le montant appliqué sur votre espace <a href="https://www.cnss.ma" rel="noopener" target="_blank">CNSS</a> ou l’application Ma CNSS.</p>
+<p>Une famille de trois enfants reçoit donc <b>900 DH par mois</b>. Pour les 4e à 6e enfants, vérifiez le montant appliqué sur votre espace agence CNSS, sur l’application Ma CNSS ou sur <a href="https://www.idarati.ma" rel="noopener" target="_blank">Idarati</a>.</p>
 <h2>Les conditions</h2>
 <ul>
 <li>être salarié déclaré à la CNSS, avec au moins <b>108 jours</b> de cotisation sur les six mois précédents ;</li>
@@ -171,7 +171,7 @@ ARTICLES3 = [
 <tr><td>الطفل الرابع والخامس والسادس</td><td>مبلغ مخفض (36 درهماً، رُفع إلى 100 درهم بالمرسوم رقم 2.23.715)</td></tr>
 <tr><td>ما بعد السادس</td><td>لا شيء</td></tr>
 </tbody></table>
-<p>تتقاضى أسرة بثلاثة أطفال إذن <b>900 درهم شهرياً</b>. بالنسبة للأطفال من الرابع إلى السادس، تحقق من المبلغ المطبق في فضائك على موقع <a href="https://www.cnss.ma" rel="noopener" target="_blank">CNSS</a> أو تطبيق Ma CNSS.</p>
+<p>تتقاضى أسرة بثلاثة أطفال إذن <b>900 درهم شهرياً</b>. بالنسبة للأطفال من الرابع إلى السادس، تحقق من المبلغ المطبق في فضائك لدى وكالة الضمان الاجتماعي أو تطبيق Ma CNSS أو بوابة <a href="https://www.idarati.ma" rel="noopener" target="_blank">إدارتي</a>.</p>
 <h2>الشروط</h2>
 <ul>
 <li>أن تكون أجيراً مصرحاً به لدى الصندوق، مع <b>108 أيام</b> على الأقل من الاشتراك خلال الأشهر الستة السابقة؛</li>

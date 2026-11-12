@@ -1,11 +1,16 @@
-name: Vérifier les liens des sources
-on: workflow_dispatch
+name: Vérifier les liens des sources officielles
+on:
+  workflow_dispatch:
+  schedule: [{cron: '17 6 * * 1'}]
 jobs:
   check:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
       - run: |
-          for u in https://www.finances.gov.ma/fr/Pages/index.aspx https://www.finances.gov.ma/ar/Pages/index.aspx https://www.mmsp.gov.ma/fr https://www.mmsp.gov.ma/ar https://maroc.ma/fr https://maroc.ma/ar https://www.idarati.ma https://data.gov.ma https://www.service-public.ma https://www.cnss.ma/ar https://www.dgi.ma https://www.portail.tax.gov.ma https://www.ecoles.gov.ma https://www.men.gov.ma https://www.sante.gov.ma https://www.justice.gov.ma http://www.cnss.ma http://www.tax.gov.ma; do
-            r=$(curl -sS -L -o /dev/null -m 25 -A "Mozilla/5.0 (Linux; Android 14) Chrome/130 Mobile" -w "%{http_code} %{url_effective} %{time_total}s" "$u" 2>&1 | tail -1)
-            echo "$u -> $r"
+          fail=0
+          for u in $(grep -rhoE 'https://(www\.)?[a-z.]*(gov\.ma|idarati\.ma|maroc\.ma)[^"<) ]*' --include=*.html . | sort -u); do
+            c=$(curl -sS -L -o /dev/null -m 30 -A "Mozilla/5.0 (Linux; Android 14) Chrome/130 Mobile" -w "%{http_code}" "$u" || true)
+            echo "$c $u"; [ "$c" = "200" ] || { echo "::error::Lien source cassé : $u ($c)"; fail=1; }
           done
+          exit $fail
