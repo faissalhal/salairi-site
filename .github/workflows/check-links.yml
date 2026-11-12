@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
-          for u in https://www.tax.gov.ma https://www.tax.gov.ma/wps/portal/DGI https://www.finances.gov.ma https://www.finances.gov.ma/fr https://www.sgg.gov.ma https://www.sgg.gov.ma/BulletinOfficiel.aspx https://www.cnss.ma https://www.cnss.ma/fr https://www.cmr.gov.ma https://www.cmr.gov.ma/fr https://www.tgr.gov.ma https://www.tgr.gov.ma/wps/portal https://www.maroc.ma https://www.mmsp.gov.ma https://www.travail.gov.ma https://www.emploi.gov.ma https://www.ilo.org https://adala.justice.gov.ma https://www.cg.gov.ma https://www.chambredesrepresentants.ma https://www.bkam.ma; do
+          for u in https://www.finances.gov.ma/fr/Pages/index.aspx https://www.finances.gov.ma/ar/Pages/index.aspx https://www.mmsp.gov.ma/fr https://www.mmsp.gov.ma/ar https://maroc.ma/fr https://maroc.ma/ar https://www.idarati.ma https://data.gov.ma https://www.service-public.ma https://www.cnss.ma/ar https://www.dgi.ma https://www.portail.tax.gov.ma https://www.ecoles.gov.ma https://www.men.gov.ma https://www.sante.gov.ma https://www.justice.gov.ma http://www.cnss.ma http://www.tax.gov.ma; do
             r=$(curl -sS -L -o /dev/null -m 25 -A "Mozilla/5.0 (Linux; Android 14) Chrome/130 Mobile" -w "%{http_code} %{url_effective} %{time_total}s" "$u" 2>&1 | tail -1)
             echo "$u -> $r"
           done
